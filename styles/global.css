@@ -25,3 +25,8 @@
 
     --semantic-error: #DC2626;
 }
+
+body{
+    /* este comando evitará que apareça barra de rolagem */
+    overflow: hidden;
+}

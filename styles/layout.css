@@ -1,0 +1,27 @@
+#app {
+    display: grid;
+    /* este comando faz os dois elementos da div app dividirem o espaço proporcionalmente às suas larguras */
+    grid-template-columns: 51.25% 48.75%;
+    /* este comando fará com que a altura fique limitada apenas à área visível */
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    overflow: auto;
+    padding: 4rem;
+}
+
+.main-container {
+    max-width: 33rem;
+    margin-left: auto;
+}
+
+aside {
+    background-color: var(--surface-secondary);
+    padding: 4rem;
+}
+
+.aside-container {
+    max-width: 31rem;
+}
