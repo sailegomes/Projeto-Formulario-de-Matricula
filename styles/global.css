@@ -26,7 +26,19 @@
     --semantic-error: #DC2626;
 }
 
-body{
+body {
     /* este comando evitará que apareça barra de rolagem */
     overflow: hidden;
+    font: var(--text);
+    color: var(--text-secondary);
+}
+
+h1,
+h2 {
+    color: var(--text-primary);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
