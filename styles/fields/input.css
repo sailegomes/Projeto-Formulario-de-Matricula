@@ -1,0 +1,111 @@
+input,
+textarea,
+select {
+    appearance: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid var(--stroke-default);
+
+    padding: 0.75rem 1rem;
+    font: var(--text);
+}
+
+label {
+    font: var(--text-sm);
+    color: var(--text-secondary);
+
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+input[type="date"]:focus-within {
+    outline: 0.25rem solid var(--surface-secondary);
+    border: 0.125rem solid var(--stroke-highlight);
+    outline-offset: .1px;
+    /* para poder funcionar no safari */
+}
+
+input[type="date"] {
+    position: relative;
+
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
+    /* Esta estratégia funciona para os demais navegadores, mas incluindo o safari. */
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../../assets/icons/calendar-03.svg) center/contain;
+        right: 1rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    /* Esta estratégia funciona para demais navegadores */
+    /* &::-webkit-calendar-picker-indicator {
+        position: absolute;
+        background: url(../../assets/icons/calendar-03.svg) center/contain;
+        right: 1rem;
+    } */
+}
+
+
+select {
+    background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+}
+
+
+.address .flex {
+    gap: 1.25rem;
+}
+
+/* input-wrapper que possui o campo desabled */
+.input-wrapper:has([disabled]) {
+    opacity: 0.5;
+}
+
+input {
+
+    /* para a tag input que possua o atributo disabled */
+    &[disabled] {
+        background-color: var(--surface-disabled);
+
+        border: 1px solid var(--stroke-default);
+
+        color: var(--text-primary);
+    }
+
+    /* para campos que possuem "required" */
+    &:invalid {
+        border: 0.125rem solid var(--semantic-error);
+    }
+
+    &[required]+.error {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font: var(--text-sm);
+        color: var(--semantic-error);
+        margin-top: 0.25rem;
+    }
+
+    &:valid+.error {
+        display: none;
+    }
+
+
+    /* input que possui tag small como irmão */
+    &+small {
+        font: var(--text-sm);
+        color: #78716C;
+        display: inline-block;
+        margin-top: 0.25rem;
+    }
+}
