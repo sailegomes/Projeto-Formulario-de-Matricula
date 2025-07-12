@@ -49,8 +49,9 @@ aside {
             color: var(--text-highlight);
         }
     }
-/* com esta forma de escrita, consigo selecionar um filho direto da tag pai */
-    > img {
+
+    /* com esta forma de escrita, consigo selecionar um filho direto da tag pai */
+    >img {
         height: auto;
         margin-top: 2rem;
     }
@@ -61,26 +62,75 @@ aside {
 /* TABLETS */
 @media (max-width: 586px) {
     .aside-container {
-    max-width: 31rem;
+        max-width: 31rem;
 
-    & h2 {
-        font: 600 1.25rem/1.25 var(--font-family);
-        margin-bottom: 0.5rem;
+        & h2 {
+            font: 600 1.25rem/1.25 var(--font-family);
+            margin-bottom: 0.5rem;
 
-        & span {
-            color: var(--text-highlight);
+            & span {
+                color: var(--text-highlight);
+            }
+        }
+
+        /* com esta forma de escrita, consigo selecionar um filho direto da tag pai */
+        >img {
+            height: auto;
+            margin-top: 5rem;
+            scale: 160%;
         }
     }
-/* com esta forma de escrita, consigo selecionar um filho direto da tag pai */
-    > img {
-        height: auto;
-        margin-top: 5rem;
-        scale: 160%;
+
+    main {
+        overflow: auto;
+        padding: 1rem;
     }
 }
 
-main {
-    overflow: auto;
-    padding: 1rem;
-}
+/* RESPONSIVIDADE CELULARES */
+/* CELULARES */
+@media (max-width: 430px) {
+    #app {
+        display: grid;
+        /* este comando faz os dois elementos da div app dividirem o espaço proporcionalmente às suas larguras */
+        grid-template-columns: 51.25% 48.75%;
+        /* este comando fará com que a altura fique limitada apenas à área visível */
+        height: 100vh;
+        overflow: hidden;
+    }
+
+
+
+
+    .aside-container {
+        max-width: 31rem;
+
+        & h2 {
+            font: 600 1.125rem/1.25 var(--font-family);
+            margin-bottom: 0.5rem;
+
+            & span {
+                color: var(--text-highlight);
+            }
+        }
+
+        /* com esta forma de escrita, consigo selecionar um filho direto da tag pai */
+        >img {
+            height: auto;
+            margin-top: 5rem;
+            scale: 240%;
+        }
+    }
+
+    main {
+        overflow: auto;
+        padding: 1rem;
+    }
+
+    header {
+        >img {
+            scale: 230%;
+            margin-bottom: 1rem;
+        }
+    }
 }

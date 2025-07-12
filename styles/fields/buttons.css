@@ -28,3 +28,13 @@ button {
         }
     }
 }
+
+
+/* RESPONSIVIDADE TABLETS */
+/* TABLETS */
+@media (max-width: 586px) {
+    button {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+}

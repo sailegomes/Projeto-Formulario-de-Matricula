@@ -26,3 +26,13 @@ fieldset+fieldset {
     display: flex;
     gap: 1rem;
 }
+
+
+
+/* RESPONSIVIDADE TABLETS */
+/* TABLETS */
+@media (max-width: 586px) {
+    .actions-wrapper {
+        margin-top: 1.5rem;
+    }
+}
