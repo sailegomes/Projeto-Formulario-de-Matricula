@@ -55,3 +55,32 @@ aside {
         margin-top: 2rem;
     }
 }
+
+
+/* RESPONSIVIDADE TABLETS */
+/* TABLETS */
+@media (max-width: 586px) {
+    .aside-container {
+    max-width: 31rem;
+
+    & h2 {
+        font: 600 1.25rem/1.25 var(--font-family);
+        margin-bottom: 0.5rem;
+
+        & span {
+            color: var(--text-highlight);
+        }
+    }
+/* com esta forma de escrita, consigo selecionar um filho direto da tag pai */
+    > img {
+        height: auto;
+        margin-top: 5rem;
+        scale: 160%;
+    }
+}
+
+main {
+    overflow: auto;
+    padding: 1rem;
+}
+}
